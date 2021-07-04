@@ -22,7 +22,7 @@ function WordData(props) {
   return <span>{text} </span>;
 }
 
-WordData = React.memo(WordData);
+// WordData = React.memo(WordData);
 
 //setting up a timer
 
@@ -107,6 +107,7 @@ function App() {
           {words.current.map((word, index) => {
             return (
               <WordData
+                key={index}
                 text={word}
                 active={index === activeWordIndex}
                 correct={correctWordArray[index]}
